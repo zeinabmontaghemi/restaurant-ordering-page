@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="javascript.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <section class="notification-bar">
+        <p>
+          Status Of Food Order<small><a class="click" herf="#">Click</a></small>
+        </p>
+      </section>
+
+      <section>
+        <h2>Food Reservation Queue</h2>
+        <div class="grid-2-cols">
+          <div class="meanu-orderbox">
+            <figure class="food">
+              <img
+                class="menu"
+                src="eiliv-aceron-5nvt9BrLaAc-unsplash.jpg"
+                alt="food"
+              />
+              <div class="food-box">
+                <div class="icon">
+                  <svg
+                    class="list-icon hydrated"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                  >
+                    >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm12-88a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm0-44a12,12,0,1,1-12-12A12,12,0,0,1,140,84Zm0,88a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"
+                    ></path>
+                  </svg>
+                  <h3>Food Menu</h3>
+                </div>
+                <ul class="food-details">
+                  <li class="element-back">
+                    <a
+                      id="Pizza"
+                      onmousedown="selectedorder(this.id)"
+                      class="menu-item"
+                      href="#"
+                      >Pizza<span id="Pizza-quantity">(10)</span></a
+                    >
+                  </li>
+                  <li class="element-back">
+                    <a
+                      id="Hamburger"
+                      onmousedown="selectedorder(this.id)"
+                      class="menu-item"
+                      href="#"
+                      >Hamburger<span id="Hamburger-quantity">(5)</span></a
+                    >
+                  </li>
+                  <li class="element-back">
+                    <a
+                      id="Cheeseburger"
+                      onmousedown="selectedorder(this.id)"
+                      class="menu-item"
+                      href="#"
+                      >Cheeseburger<span id="Cheeseburger-quantity"
+                        >(5)</span
+                      ></a
+                    >
+                  </li>
+                  <li class="element-back">
+                    <a
+                      id="Taco"
+                      onmousedown="selectedorder(this.id)"
+                      class="menu-item"
+                      href="#"
+                      >Taco<span id="Taco-quantity">(5)</span></a
+                    >
+                  </li>
+                  <li class="element-back">
+                    <a
+                      id="Hot dog"
+                      onmousedown="selectedorder(this.id)"
+                      class="menu-item"
+                      href="#"
+                      >Hot dog<span id="Hot-dog-quantity">(5)</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </figure>
+            <figure class="food" class="order">
+              <div id="order-box">
+                <h3>Order Box</h3>
+                <lable>
+                  enter the number of order:
+                  <input
+                    type="number"
+                    min="1"
+                    placeholder="0"
+                    id="food-quantity"
+                /></lable>
+
+                <button id="order-button" disabled>Order</button>
+                <p id="timer"></p>
+              </div>
+            </figure>
+          </div>
+          <div class="cooking-readyfood">
+            <figure class="food" class="cookingFood">
+              <img
+                class="cooking"
+                src="jason-jarrach-wPokNvMBZ5Y-unsplash.jpg"
+                alt="cooking"
+              />
+              <div class="food-box">
+                <div class="icon">
+                  <svg
+                    class="list-icon hydrated"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z"
+                    ></path>
+                  </svg>
+                  <h3>Cooking Food</h3>
+                </div>
+                <ul class="food-details" id="cookingFood">
+                  <!-- <li class="element-back"><span>pizza</span></li>
+                <li class="element-back"><span>Taco</span></li>
+                <li class="element-back"><span>Hamburger</span></li>
+                <li class="element-back"><span>Hot dog</span></li> -->
+                </ul>
+              </div>
+            </figure>
+
+            <figure class="food" class="readyFood">
+              <img class="package" src="Asset 1-100.jpg" alt="packaging" />
+              <div class="food-box">
+                <div class="icon">
+                  <svg
+                    class="list-icon hydrated"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                    ></path>
+                  </svg>
+
+                  <h3>Ready Food</h3>
+                </div>
+                <ul class="food-details" id="readyFood">
+                  <!-- <li class="element-back"><span>pizza</span></li>
+                <li class="element-back"><span>Hot dog</span></li>
+                <li class="element-back"><span>Cheeseburger</span></li> -->
+                </ul>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

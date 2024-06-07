@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  align-content: center;
+  justify-content: center;
+}
+.container {
+  width: 960px;
+  min-height: 1100px;
+  box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.163);
+  margin: 0 auto;
+  background-color: #fceddd;
+}
+
+/* notificatin bar */
+
+.notification-bar {
+  display: grid;
+  width: 100%;
+  grid-column: 1/-1;
+  height: 40px;
+  background: #e67700;
+  text-align: center;
+  color: #000;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+  align-content: center;
+  justify-content: center;
+}
+.notification-bar small {
+  margin-left: 5px;
+}
+.notification-bar p a {
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: #000;
+  color: #e67700;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.click:hover,
+.click:active {
+  background-color: #212529;
+  color: #fff;
+}
+
+/* food card */
+img {
+  height: 177px;
+  object-fit: cover;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.grid-2-cols {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 80px; */
+  justify-content: center;
+  display: flex;
+  gap: 180px;
+  flex-basis: 377px;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+.food {
+  box-shadow: 0px 20px 30px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+  background-color: #fff;
+  /* flex-basis: 277px; */
+  transition: all 0.4s;
+}
+/* .food :hover {
+  flex-basis: 377px;
+} */
+
+.food img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.food-box {
+  padding: 24px;
+}
+
+h3 {
+  padding-top: 2px;
+  padding-left: 10px;
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+.food-details {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.food-details li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding: 0 26px;
+
+  font-weight: 500;
+}
+
+.chair-details li:last-child {
+  margin-bottom: 0;
+}
+/* .cooking {
+  object-position: 25% 35%;
+}
+.menu {
+  object-position: 100% 40%;
+} */
+h2 {
+  margin-bottom: 48px;
+  font-size: 38px;
+  letter-spacing: -0.5;
+  padding-left: 30px;
+  padding-bottom: 50px;
+  font-weight: bold;
+}
+
+/* @media screen and (max-width: 480px) {
+  .grid-3-cols {
+    grid-template-columns: 266px;
+    grid-template-rows: repeat(3, 493px);
+    justify-content: center;
+
+    row-gap: 30px;
+  }
+  .container {
+    display: grid;
+    grid-template-rows: repeat(2);
+
+    justify-content: center;
+  }
+} */
+
+@media screen and (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .grid-2-cols {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .food {
+    flex-basis: 593px;
+  }
+
+  img {
+    height: 277px;
+  }
+}
+
+.food-details a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px;
+  /* border-bottom: 1px solid #343a40; */
+  width: 100%;
+  /* border-radius: 3px; */
+  /* background-color: #f8f9fa; */
+  /* border-style: solid; */
+  outline-style: solid;
+  outline-width: 0.5px;
+  border-radius: 10px;
+  outline-color: #e67700;
+  /* border-width: 0.5px; */
+  /* box-shadow: #000; */
+}
+
+.menu-item:hover,
+.menu-item:active {
+  border-radius: 10px;
+  /* border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; */
+  background-color: #e9ecef;
+  color: #343a40;
+  font-weight: bold;
+}
+
+.food-details span {
+  padding: 10px;
+}
+.list-icon {
+  width: 26px;
+  height: 26px;
+  fill: #e67700;
+}
+.hydrated {
+  visibility: inherit;
+}
+
+.icon {
+  display: flex;
+  align-content: center;
+}
+#order-box {
+  /* outline-style: solid;
+  object-fit: cover;
+  border-radius: 12px;
+  width: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; */
+  margin: 20px;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.meanu-orderbox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;
+}
+.cooking-readyfood {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-items: stretch;
+}
+#order-button {
+  height: 45px;
+  width: 200px;
+  margin: 20px;
+  border-radius: 12px;
+  background-color: #ffc078;
+  color: #343a40;
+  font-size: 18px;
+  font-weight: bold;
+  border-width: 3px;
+}
+.cooking-readyfood .food-box {
+  height: 201px;
+}
